@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { GraduationCap, Brain, FileText, Languages, TrendingUp, Lightbulb, Star, ArrowRight, CheckCircle } from 'lucide-react';
+import { GraduationCap, Brain, FileText, Languages,Lightbulb, Star, ArrowRight, CheckCircle } from 'lucide-react';
 
 const Home = () => {
   const navigate = useNavigate();

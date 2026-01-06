@@ -1,8 +1,8 @@
 import { useParams, useNavigate, useLocation } from 'react-router-dom';
-import { FileText, ArrowLeft, CheckCircle, X, TrendingUp, BookOpen } from 'lucide-react';
+import { ArrowLeft, CheckCircle, X, TrendingUp, BookOpen } from 'lucide-react';
 
 const QuizResults = () => {
-  const { quizId } = useParams();
+  const {} = useParams();
   const navigate = useNavigate();
   const location = useLocation();
   const results = location.state?.results;

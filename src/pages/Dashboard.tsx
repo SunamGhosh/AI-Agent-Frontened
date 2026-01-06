@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { GraduationCap, Brain, FileText, Languages, TrendingUp, BookOpen, Lightbulb, Plus, LogOut } from 'lucide-react';
+import { Brain, FileText, Languages, TrendingUp, BookOpen, Lightbulb, Plus, LogOut } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 import { learningAPI, quizAPI } from '../services/api';
 

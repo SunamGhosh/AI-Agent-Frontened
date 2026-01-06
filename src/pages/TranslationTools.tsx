@@ -5,7 +5,7 @@ import Navbar from '../components/Navbar';
 
 const TranslationTools = () => {
   const [activeTab, setActiveTab] = useState(0);
-  const [languages, setLanguages] = useState({});
+const [languages, setLanguages] = useState<Record<string, string>>({});
   const [translationData, setTranslationData] = useState({
     text: '',
     fromLang: 'en',
