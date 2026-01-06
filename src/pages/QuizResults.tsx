@@ -24,7 +24,7 @@ const QuizResults = () => {
     );
   }
 
-  const { score, totalQuestions, correctAnswers, results: questionResults } = results;
+  const { totalQuestions, correctAnswers, results: questionResults } = results;
   const percentage = Math.round((correctAnswers / totalQuestions) * 100);
   const isPassed = percentage >= 70;
 

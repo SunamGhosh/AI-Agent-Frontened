@@ -74,7 +74,7 @@ const QuizGenerator = () => {
     setGenerating(true);
     try {
       const response = await quizAPI.generateQuiz(quizForm);
-      const newQuiz = response.data.quiz;
+      // const newQuiz = response.data.quiz;
       setQuizzes([response.data, ...quizzes]);
       setOpenDialog(false);
       setQuizForm({

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { FileText, ArrowLeft, ArrowRight, CheckCircle, X } from 'lucide-react';
+import { ArrowLeft, ArrowRight, CheckCircle} from 'lucide-react';
 import { quizAPI } from '../services/api';
 
 const QuizTaking = () => {

@@ -1,11 +1,11 @@
 import { useState, useEffect, useRef } from 'react';
-import { GraduationCap, Send, BookOpen, MessageCircle } from 'lucide-react';
+import { GraduationCap, Send, BookOpen} from 'lucide-react';
 import { learningAPI } from '../services/api';
-import { useAuth } from '../context/AuthContext';
+// import { useAuth } from '../context/AuthContext';
 import Navbar from '../components/Navbar';
 
 const LearningAssistant = () => {
-  const { user } = useAuth();
+  // const {} = useAuth();
   const [messages, setMessages] = useState([]);
   const [inputMessage, setInputMessage] = useState('');
   const [loading, setLoading] = useState(false);
