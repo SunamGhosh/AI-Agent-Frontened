@@ -150,6 +150,7 @@ const Home = () => {
                   </span>
                   <span className="block text-black">Everyone</span>
                 </h1>
+                <h6>Developed By Sunam Ghosh</h6>
 
                 <p className="text-xl lg:text-2xl text-blue-100 mb-10 leading-relaxed font-light animate-fade-in-up animation-delay-200">
                   Unlock your potential with personalized AI learning assistants, smart quiz generators, and multilingual educational tools. Transform education with cutting-edge technology.
