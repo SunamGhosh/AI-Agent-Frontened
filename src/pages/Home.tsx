@@ -84,19 +84,29 @@ const Home = () => {
                 <div className="text-xs text-gray-500 font-medium">AI-Powered Learning</div>
               </div>
             </div>
-            <div className="flex gap-3">
-              <button
-                onClick={() => navigate('/login')}
-                className="px-6 py-2.5 text-gray-700 hover:text-blue-600 font-medium rounded-xl hover:bg-blue-50 transition-all duration-300 hover:shadow-md"
-              >
-                Sign In
-              </button>
-              <button
-                onClick={() => navigate('/register')}
-                className="px-8 py-2.5 bg-gradient-to-r from-blue-600 to-indigo-600 text-black font-semibold rounded-xl hover:from-blue-700 hover:to-indigo-700 transform hover:scale-105 transition-all duration-300 shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/40"
-              >
-                Get Started Free
-              </button>
+            <div className="flex flex-col gap-3">
+              <div className="flex gap-3">
+                <button
+                  onClick={() => navigate('/login')}
+                  className="px-6 py-2.5 text-gray-700 hover:text-blue-600 font-medium rounded-xl hover:bg-blue-50 transition-all duration-300 hover:shadow-md"
+                >
+                  Sign In
+                </button>
+                <button
+                  onClick={() => navigate('/register')}
+                  className="px-8 py-2.5 bg-gradient-to-r from-blue-600 to-indigo-600 text-black font-semibold rounded-xl hover:from-blue-700 hover:to-indigo-700 transform hover:scale-105 transition-all duration-300 shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/40"
+                >
+                  Get Started Free
+                </button>
+              </div>
+              <div className="text-center">
+                <button
+                  onClick={() => navigate('/admin/login')}
+                  className="text-sm text-red-600 hover:text-red-700 font-medium hover:underline transition-all"
+                >
+                  Administrator Login
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -457,7 +467,7 @@ const Home = () => {
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-pink-300/10 rounded-full blur-xl animate-pulse delay-500"></div>
           </div>
 
-          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+          <div className="w-full px-4 sm:px-6 lg:px-8 text-center relative z-10">
             <div className="inline-flex items-center px-6 py-3 bg-white/10 backdrop-blur-sm rounded-full text-black text-sm font-semibold mb-8 border border-white/20">
               🎯 Start Your Learning Journey Today
             </div>

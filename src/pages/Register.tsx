@@ -89,7 +89,10 @@ const Register = () => {
     setLoading(true);
 
     try {
-      const result = await register(formData);
+      const result = await register({
+        ...formData,
+        role: 'user' // Force user role for regular registration
+      });
       if (result.success) {
         navigate('/dashboard');
       } else {
@@ -130,7 +133,7 @@ const Register = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-4xl mx-auto">
+      <div className="w-full">
         <div className="text-center mb-8">
           <div className="mx-auto w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mb-4">
             <GraduationCap className="w-8 h-8 text-white" />
@@ -318,7 +321,7 @@ const Register = () => {
             </button>
           </form>
 
-          <div className="mt-6 text-center">
+          <div className="mt-6 text-center space-y-2">
             <p className="text-gray-600">
               Already have an account?{' '}
               <Link
@@ -326,6 +329,15 @@ const Register = () => {
                 className="text-blue-600 hover:text-blue-700 font-semibold"
               >
                 Sign in
+              </Link>
+            </p>
+            <p className="text-gray-600">
+              Administrator?{' '}
+              <Link
+                to="/admin/register"
+                className="text-red-600 hover:text-red-700 font-semibold"
+              >
+                Admin Registration
               </Link>
             </p>
           </div>

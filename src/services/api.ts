@@ -68,4 +68,26 @@ export const translationAPI = {
   translateQuiz: (quizData) => api.post('/api/translation/quiz-translate', quizData),
 };
 
+// Admin API
+export const adminAPI = {
+  // Dashboard stats
+  getStats: () => api.get('/api/admin/stats'),
+
+  // User management
+  getUsers: () => api.get('/api/admin/users'),
+  getUser: (userId) => api.get(`/api/admin/users/${userId}`),
+  updateUserRole: (userId, role) => api.put(`/api/admin/users/${userId}/role`, { role }),
+  deleteUser: (userId) => api.delete(`/api/admin/users/${userId}`),
+
+  // Quiz management
+  getAllQuizzes: () => api.get('/api/admin/quizzes'),
+  getQuiz: (quizId) => api.get(`/api/admin/quizzes/${quizId}`),
+  deleteQuiz: (quizId) => api.delete(`/api/admin/quizzes/${quizId}`),
+
+  // Learning session management
+  getAllSessions: () => api.get('/api/admin/sessions'),
+  getSession: (sessionId) => api.get(`/api/admin/sessions/${sessionId}`),
+  deleteSession: (sessionId) => api.delete(`/api/admin/sessions/${sessionId}`),
+};
+
 export default api;

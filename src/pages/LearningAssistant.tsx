@@ -269,7 +269,7 @@ const LearningAssistant = () => {
             </div>
           </div>
         ) : (
-          <div className="max-w-4xl mx-auto">
+          <div className="w-full">
             {/* Session Header */}
             <div className="bg-white rounded-2xl shadow-lg p-6 mb-6 border border-gray-100">
               <div className="flex justify-between items-center">

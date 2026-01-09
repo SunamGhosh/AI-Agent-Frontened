@@ -1,13 +1,13 @@
 import { useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { GraduationCap, Brain, FileText, Languages, User, LogOut } from 'lucide-react';
+import { GraduationCap, Brain, FileText, Languages, User, LogOut, Shield } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
-  const { logout } = useAuth();
+  const { logout, isAdmin } = useAuth();
 
   const handleLogout = () => {
     logout();
@@ -30,6 +30,11 @@ const Navbar = () => {
       path: '/translation',
       icon: <Languages className="w-5 h-5" />,
     },
+    ...(isAdmin ? [{
+      name: 'Admin Panel',
+      path: '/admin',
+      icon: <Shield className="w-5 h-5" />,
+    }] : []),
   ];
 
   const isActive = (path: string) => location.pathname === path;
